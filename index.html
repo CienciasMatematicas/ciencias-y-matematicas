@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portal educativo gratuito de Matemáticas, Física y Química para estudiantes de sexto a undécimo.">
+<title>Ciencias y Matemáticas | Portal educativo</title>
+<style>
+:root{--navy:#102b55;--blue:#1769d2;--sky:#eaf4ff;--ink:#17243a;--muted:#5b6b82;--line:#dce6f2;--white:#fff;--green:#168453;--purple:#7145c6;--gold:#f6b928}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5f8fc;line-height:1.55}
+a{color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--navy);font-size:1.1rem}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#1769d2,#20b6a4);display:grid;place-items:center;color:white;font-size:1.45rem}
+nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}nav a{font-size:.91rem;text-decoration:none;padding:8px 10px;border-radius:9px;color:#2e405d}nav a:hover,nav a:focus{background:var(--sky);color:var(--blue)}
+.menu{display:none;border:0;background:var(--blue);color:white;border-radius:8px;padding:8px 12px;font-size:1rem}
+.hero{background:radial-gradient(circle at 80% 25%,#285b8b 0,transparent 34%),linear-gradient(120deg,#071a36,#123d69);color:white;padding:58px 0 52px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:30px}.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.13em;color:#a9d7ff;font-weight:700}.hero h1{font-size:clamp(2.1rem,4.3vw,3.8rem);line-height:1.08;margin:12px 0 18px;max-width:760px}.hero h1 span{color:#ffc247}.hero p{font-size:1.1rem;color:#e4eef9;max-width:680px}.hero-art{font-size:clamp(6rem,14vw,10rem);text-align:center;filter:drop-shadow(0 10px 25px #0005)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:12px 17px;font-weight:700;text-decoration:none;cursor:pointer;font-size:.95rem}.btn-primary{background:#2479f2;color:white}.btn-light{background:white;color:var(--navy)}.btn-outline{border:1px solid #b8cce3;background:transparent;color:var(--navy)}.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+section{padding:36px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}.section-head h2{font-size:1.65rem;color:var(--navy);margin:0}.section-head p{margin:5px 0 0;color:var(--muted)}.grades{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.grade{border:1px solid var(--line);border-radius:13px;background:white;padding:15px 8px;text-align:center;cursor:pointer;color:var(--navy);font-weight:700}.grade small{display:block;color:var(--muted);font-weight:400}.grade.active,.grade:hover{background:#e4f1ff;border-color:#78b4ff;box-shadow:0 4px 14px #1769d21a}
+.subjects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.subject{position:relative;overflow:hidden;min-height:190px;border-radius:18px;padding:22px;color:white;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 24px #102b5510}.subject.math{background:linear-gradient(120deg,#1769d2,#439de6)}.subject.physics{background:linear-gradient(120deg,#08794d,#26a77b)}.subject.chem{background:linear-gradient(120deg,#6840b9,#a27ae6)}.subject .symbol{font-size:2.2rem;font-weight:800}.subject h3{font-size:1.45rem;margin:0}.subject p{margin:6px 0 15px;max-width:310px;color:#f3f8ff}.subject .btn{align-self:flex-start;padding:9px 13px}
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.tool{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;text-decoration:none;transition:.15s}.tool:hover{transform:translateY(-3px);box-shadow:0 8px 24px #142c5012}.tool .emoji{font-size:1.8rem}.tool h3{margin:8px 0 3px;color:var(--navy);font-size:1rem}.tool p{font-size:.88rem;color:var(--muted);margin:0}
+.content-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:20px}.panel h2,.panel h3{color:var(--navy);margin-top:0}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.filters select,.filters input{padding:10px;border:1px solid #cdd9e8;border-radius:9px;background:white;font:inherit}.resource-list{display:grid;gap:10px}.resource{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e4ebf4;border-radius:12px}.resource .fileicon{font-size:1.5rem}.resource .info{flex:1}.resource h4{margin:0;color:var(--navy)}.resource p{margin:2px 0 0;color:var(--muted);font-size:.86rem}.tag{font-size:.76rem;background:#eaf4ff;color:#1a5fb8;padding:4px 8px;border-radius:99px;white-space:nowrap}
+.quiz-question{padding:15px 0;border-bottom:1px solid var(--line)}.quiz-question:last-of-type{border-bottom:0}.quiz-question h4{margin:0 0 9px}.option{display:block;margin:7px 0;padding:9px 11px;border:1px solid var(--line);border-radius:9px;cursor:pointer}.option:hover{background:#f1f7ff}.option input{margin-right:8px}.feedback{margin-top:12px;font-weight:700}.muted{color:var(--muted)}.notice{background:#fff8df;border:1px solid #f4df9a;border-radius:12px;padding:12px 14px;color:#684d08;font-size:.9rem}
+footer{background:#0c2141;color:#e6effb;padding:30px 0;margin-top:20px}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-grid p{margin:4px 0;color:#bbcee4;font-size:.9rem}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-art{display:none}.grades{grid-template-columns:repeat(3,1fr)}.subjects{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}.content-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.nav{align-items:flex-start}.menu{display:block}nav{display:none;position:absolute;left:4%;right:4%;top:68px;background:white;border:1px solid var(--line);box-shadow:0 12px 24px #0002;border-radius:13px;padding:10px;flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:10px}.hero{padding:42px 0}.section-head{align-items:flex-start;flex-direction:column}.tools-grid{grid-template-columns:1fr 1fr}.resource{align-items:flex-start}.tag{display:none}}
+@media(max-width:400px){.tools-grid{grid-template-columns:1fr}.grades{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#inicio"><span class="logo">⚛</span><span>Ciencias y Matemáticas<small style="display:block;font-weight:400;font-size:.75rem;color:#60728b">Aprender · Comprender · Aplicar</small></span></a>
+  <button class="menu" id="menuBtn" aria-label="Abrir menú">☰ Menú</button>
+  <nav id="mainNav"><a href="#inicio">Inicio</a><a href="#asignaturas">Asignaturas</a><a href="#recursos">Recursos</a><a href="#evaluaciones">Evaluaciones</a><a href="#videos">Videos y simuladores</a><a href="#acerca">Acerca de</a></nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+ <div class="wrap hero-grid"><div><div class="eyebrow">Portal educativo · Grados 6.º a 11.º</div><h1>Aprende, comprende y aplica <span>la ciencia.</span></h1><p>Material de estudio, talleres, evaluaciones y recursos para explorar las Matemáticas, la Física y la Química a tu ritmo.</p><div class="actions"><a class="btn btn-primary" href="#recursos">Explorar recursos →</a><a class="btn btn-light" href="#evaluaciones">Resolver evaluación</a></div></div><div class="hero-art" aria-hidden="true">🧪 🪐</div></div>
+</section>
+<section id="grados">
+ <div class="wrap"><div class="section-head"><div><h2>Selecciona tu grado</h2><p>Los recursos se pueden filtrar por nivel escolar.</p></div></div>
+ <div class="grades" id="gradeButtons">
+ <button class="grade active" data-grade="Todos">Todos<small>Grados</small></button><button class="grade" data-grade="6">6.º<small>Sexto</small></button><button class="grade" data-grade="7">7.º<small>Séptimo</small></button><button class="grade" data-grade="8">8.º<small>Octavo</small></button><button class="grade" data-grade="9">9.º<small>Noveno</small></button><button class="grade" data-grade="10">10.º<small>Décimo</small></button><button class="grade" data-grade="11">11.º<small>Undécimo</small></button>
+ </div></div>
+</section>
+<section id="asignaturas" style="padding-top:0">
+ <div class="wrap"><div class="section-head"><div><h2>Explora por asignatura</h2><p>Elige un área para encontrar contenidos y actividades.</p></div></div>
+ <div class="subjects">
+  <article class="subject math"><div><div class="symbol">π</div><h3>Matemáticas</h3><p>Números, álgebra, geometría, estadística y probabilidad.</p></div><a class="btn btn-light" href="#recursos" data-subject-link="Matemáticas">Ver contenidos →</a></article>
+  <article class="subject physics"><div><div class="symbol">⚛</div><h3>Física</h3><p>Movimiento, fuerzas, energía, ondas, óptica y relatividad.</p></div><a class="btn btn-light" href="#recursos" data-subject-link="Física">Ver contenidos →</a></article>
+  <article class="subject chem"><div><div class="symbol">⚗</div><h3>Química</h3><p>Materia, átomos, enlaces, soluciones y reacciones químicas.</p></div><a class="btn btn-light" href="#recursos" data-subject-link="Química">Ver contenidos →</a></article>
+ </div></div>
+</section>
+<section id="recursos">
+ <div class="wrap content-grid">
+  <div class="panel"><h2>📚 Biblioteca de recursos</h2><p class="muted">Ejemplos iniciales. Puedes reemplazarlos por tus propios archivos y enlaces.</p>
+   <div class="filters"><select id="subjectFilter" aria-label="Filtrar por asignatura"><option value="Todas">Todas las asignaturas</option><option>Matemáticas</option><option>Física</option><option>Química</option></select><select id="typeFilter" aria-label="Filtrar por tipo"><option value="Todos">Todos los tipos</option><option>Taller</option><option>Guía</option><option>Video</option><option>Simulador</option></select><input id="searchInput" placeholder="Buscar recurso..." aria-label="Buscar recurso"></div>
+   <div class="resource-list" id="resourceList">
+    <div class="resource" data-subject="Matemáticas" data-grade="7" data-type="Taller" data-search="cuerpos redondos área volumen"><span class="fileicon">📄</span><div class="info"><h4>Cuerpos redondos: área y volumen</h4><p>Matemáticas · Grado 7.º · Taller de práctica</p></div><span class="tag">Taller</span></div>
+    <div class="resource" data-subject="Física" data-grade="11" data-type="Guía" data-search="relatividad longitud tiempo masa energia"><span class="fileicon">📘</span><div class="info"><h4>Longitud y tiempo relativista</h4><p>Física · Grado 11.º · Lectura y preguntas</p></div><span class="tag">Guía</span></div>
+    <div class="resource" data-subject="Química" data-grade="9" data-type="Guía" data-search="enlace químico atomos moléculas"><span class="fileicon">📘</span><div class="info"><h4>Introducción al enlace químico</h4><p>Química · Grado 9.º · Conceptos básicos</p></div><span class="tag">Guía</span></div>
+    <div class="resource" data-subject="Física" data-grade="10" data-type="Simulador" data-search="movimiento fuerzas energia simulador"><span class="fileicon">🧩</span><div class="info"><h4>Movimiento y fuerzas</h4><p>Física · Grado 10.º · Simulador interactivo externo</p></div><a href="https://phet.colorado.edu/es/" target="_blank" rel="noopener">Abrir ↗</a></div>
+    <div class="resource" data-subject="Matemáticas" data-grade="8" data-type="Video" data-search="álgebra ecuaciones video"><span class="fileicon">▶️</span><div class="info"><h4>Álgebra y ecuaciones</h4><p>Matemáticas · Grado 8.º · Añade aquí el enlace del video</p></div><span class="tag">Video</span></div>
+   </div><p id="emptyState" class="muted" hidden>No se encontraron recursos con esos filtros.</p>
+  </div>
+  <aside class="panel"><h3>🌐 Herramientas recomendadas</h3>
+   <div class="resource"><span class="fileicon">🧪</span><div class="info"><h4><a href="https://phet.colorado.edu/es/" target="_blank" rel="noopener">PhET</a></h4><p>Simulaciones de ciencias y matemáticas.</p></div></div>
+   <div class="resource"><span class="fileicon">📐</span><div class="info"><h4><a href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a></h4><p>Geometría, álgebra y gráficas.</p></div></div>
+   <div class="resource"><span class="fileicon">🎓</span><div class="info"><h4><a href="https://es.khanacademy.org/" target="_blank" rel="noopener">Khan Academy</a></h4><p>Lecciones y ejercicios de práctica.</p></div></div>
+   <div class="notice" style="margin-top:16px">Para publicar tus propios talleres, añade los archivos PDF/Word a la carpeta del sitio y enlázalos desde esta biblioteca.</div>
+  </aside>
+ </div>
+</section>
+<section id="evaluaciones">
+ <div class="wrap"><div class="section-head"><div><h2>📝 Evaluación de práctica</h2><p>Cuestionario demostrativo de selección múltiple con una sola respuesta.</p></div></div>
+ <div class="panel" style="max-width:850px">
+  <p><strong>Matemáticas · Conceptos básicos</strong></p>
+  <form id="quizForm">
+   <div class="quiz-question"><h4>1. ¿Cuál es el resultado de \(3^2 + 4\)?</h4><label class="option"><input type="radio" name="q1" value="a"> 10</label><label class="option"><input type="radio" name="q1" value="b"> 13</label><label class="option"><input type="radio" name="q1" value="c"> 49</label></div>
+   <div class="quiz-question"><h4>2. ¿Cuál es la unidad de fuerza en el Sistema Internacional?</h4><label class="option"><input type="radio" name="q2" value="a"> Julio</label><label class="option"><input type="radio" name="q2" value="b"> Newton</label><label class="option"><input type="radio" name="q2" value="c"> Vatio</label></div>
+   <div class="quiz-question"><h4>3. ¿Qué partícula tiene carga eléctrica negativa?</h4><label class="option"><input type="radio" name="q3" value="a"> Protón</label><label class="option"><input type="radio" name="q3" value="b"> Neutrón</label><label class="option"><input type="radio" name="q3" value="c"> Electrón</label></div>
+   <button class="btn btn-primary" type="submit">Calificar respuestas</button> <button class="btn btn-outline" type="reset" id="resetQuiz">Intentar de nuevo</button>
+   <div class="feedback" id="quizFeedback" role="status" aria-live="polite"></div>
+  </form>
+  <p class="muted" style="font-size:.86rem">Esta demostración califica en el navegador. No guarda ni envía las respuestas del estudiante.</p>
+ </div></div>
+</section>
+<section id="videos">
+ <div class="wrap"><div class="section-head"><div><h2>🎬 Videos y simuladores</h2><p>Recursos externos para aprender de forma visual.</p></div></div>
+ <div class="tools-grid">
+  <a class="tool" href="https://phet.colorado.edu/es/" target="_blank" rel="noopener"><div class="emoji">🧲</div><h3>Simulaciones PhET</h3><p>Explora fenómenos físicos y químicos.</p></a>
+  <a class="tool" href="https://www.geogebra.org/" target="_blank" rel="noopener"><div class="emoji">📈</div><h3>GeoGebra</h3><p>Construcciones y gráficas matemáticas.</p></a>
+  <a class="tool" href="https://www.youtube.com/" target="_blank" rel="noopener"><div class="emoji">▶️</div><h3>Clases en video</h3><p>Añade enlaces a tus videos favoritos.</p></a>
+  <a class="tool" href="https://es.khanacademy.org/" target="_blank" rel="noopener"><div class="emoji">📚</div><h3>Khan Academy</h3><p>Práctica guiada y explicaciones.</p></a>
+ </div></div>
+</section>
+<section id="acerca">
+ <div class="wrap panel"><h2>Acerca de Ciencias y Matemáticas</h2><p>Este portal está pensado como un espacio de apoyo escolar para estudiantes de sexto a undécimo. Aquí se podrán organizar recursos por grado, asignatura y tipo de actividad.</p><p class="muted">Docente administrador: puedes reemplazar este texto por tu presentación, institución y datos de contacto. Evita publicar información personal de estudiantes.</p></div>
+</section>
+</main>
+<footer><div class="wrap footer-grid"><div><strong>⚛ Ciencias y Matemáticas</strong><p>Aprender · Comprender · Aplicar</p></div><div><strong>Portal educativo gratuito</strong><p>Primera versión editable · 2026</p></div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+let selectedGrade='Todos', selectedSubject='Todas';
+document.querySelectorAll('.grade').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.grade').forEach(b=>b.classList.remove('active'));btn.classList.add('active');selectedGrade=btn.dataset.grade;filterResources();
+}));
+document.querySelectorAll('[data-subject-link]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('subjectFilter').value=a.dataset.subjectLink;filterResources()}));
+function filterResources(){
+ const subject=document.getElementById('subjectFilter').value,type=document.getElementById('typeFilter').value,term=document.getElementById('searchInput').value.toLowerCase().trim();let shown=0;
+ document.querySelectorAll('#resourceList .resource').forEach(el=>{
+  const okSubject=subject==='Todas'||el.dataset.subject===subject;
+  const okGrade=selectedGrade==='Todos'||el.dataset.grade===selectedGrade;
+  const okType=type==='Todos'||el.dataset.type===type;
+  const okTerm=(el.dataset.search+' '+el.innerText).toLowerCase().includes(term);
+  el.hidden=!(okSubject&&okGrade&&okType&&okTerm);if(!el.hidden)shown++;
+ });document.getElementById('emptyState').hidden=shown!==0;
+}
+['subjectFilter','typeFilter','searchInput'].forEach(id=>document.getElementById(id).addEventListener(id==='searchInput'?'input':'change',filterResources));
+document.getElementById('quizForm').addEventListener('submit',e=>{
+ e.preventDefault();const answers={q1:'b',q2:'b',q3:'c'};let score=0,unanswered=0;
+ Object.keys(answers).forEach(q=>{const chosen=document.querySelector('input[name="'+q+'"]:checked');if(!chosen)unanswered++;else if(chosen.value===answers[q])score++});
+ const feedback=document.getElementById('quizFeedback');feedback.textContent='Resultado: '+score+' de 3 respuestas correctas.'+(unanswered?' Te faltó responder '+unanswered+' pregunta(s).':'');feedback.style.color=score===3?'#168453':'#b45b00';
+});
+document.getElementById('resetQuiz').addEventListener('click',()=>{document.getElementById('quizFeedback').textContent=''});
+</script>
+</body>
+</html>
